@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oura - Explore How We Can Help</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: linear-gradient(135deg, #f5f1eb 0%, #ede5d8 100%);
+        color: #2c3e50;
+        line-height: 1.6;
+      }
+
+      .container2 {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .hero-section2 {
+        padding: 80px 0;
+        text-align: left;
+      }
+
+      .hero-title2 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 300;
+        margin-bottom: 20px;
+        color: #2c3e50;
+      }
+
+      .hero-subtitle2 {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        font-style: italic;
+        font-weight: 300;
+        color: #7f8c8d;
+        margin-bottom: 30px;
+      }
+
+      .hero-description2 {
+        font-size: 1.1rem;
+        color: #5d6d7e;
+        max-width: 600px;
+        margin-bottom: 60px;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 80px;
+      }
+
+      .service-card {
+        text-align: center;
+        padding: 30px 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #34495e;
+      }
+
+      .service-title {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      .featured-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        background: white;
+      }
+
+      .featured-image {
+        background: linear-gradient(45deg, #f39c12, #e67e22);
+        position: relative;
+        min-height: 500px;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="%23f39c12"/><circle cx="200" cy="150" r="80" fill="%23e67e22" opacity="0.7"/></svg>');
+        background-size: cover;
+        background-position: center;
+      }
+
+      .featured-content {
+        padding: 60px 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: white;
+      }
+
+      .featured-tag {
+        background: #2c3e50;
+        color: white;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: inline-block;
+        margin-bottom: 30px;
+        border-radius: 4px;
+      }
+
+      .featured-quote {
+        font-size: 1.5rem;
+        line-height: 1.4;
+        color: #2c3e50;
+        margin-bottom: 30px;
+        font-style: italic;
+        position: relative;
+      }
+
+      .featured-quote::before {
+        content: '"';
+        font-size: 3rem;
+        color: #bdc3c7;
+        position: absolute;
+        left: -20px;
+        top: -10px;
+      }
+
+      .featured-author {
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 5px;
+      }
+
+      .featured-title {
+        color: #7f8c8d;
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+      }
+
+      .cta-link {
+        color: #3498db;
+        text-decoration: underline;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .cta-link:hover {
+        color: #2980b9;
+      }
+
+      .hands-visual {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 40px 0;
+          text-align: center;
+        }
+
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px;
+        }
+
+        .featured-section {
+          grid-template-columns: 1fr;
+        }
+
+        .featured-image {
+          min-height: 300px;
+        }
+
+        .featured-content {
+          padding: 40px 30px;
+        }
+
+        .featured-quote {
+          font-size: 1.2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    TODO: delete some of head of html2 , but the controlling of html1 with html2
+    is still back & front , change some background mobile responsive ignore all
+    !
+
+    <div class="container2">
+      <section class="hero-section2">
+        <h1 class="hero-title2">Explore how</h1>
+        <h2 class="hero-subtitle2">we can help</h2>
+        <p class="hero-description2">
+          From gifting and rewards, to population health and wellness, read how
+          Oura has left a lasting impact on these organizations.
+        </p>
+      </section>
+
+      <section class="services-grid">
+        <div class="service-card" onclick="selectService('gifting')">
+          <div class="service-icon">💎</div>
+          <h3 class="service-title">Gifting & Rewards</h3>
+        </div>
+
+        <div class="service-card" onclick="selectService('wellness')">
+          <div class="service-icon">🏃</div>
+          <h3 class="service-title">Employee Wellness</h3>
+        </div>
+
+        <div class="service-card" onclick="selectService('performance')">
+          <div class="service-icon">📊</div>
+          <h3 class="service-title">Human Performance + Recovery</h3>
+        </div>
+
+        <div class="service-card" onclick="selectService('research')">
+          <div class="service-icon">📋</div>
+          <h3 class="service-title">Research</h3>
+        </div>
+      </section>
+
+      <section class="featured-section">
+        <div class="featured-image">
+          <div class="hands-visual">🤝</div>
+        </div>
+        <div class="featured-content">
+          <div class="featured-tag">Human Performance + Recovery</div>
+          <blockquote class="featured-quote">
+            My Oura Ring helps me recover when I need it most on or off the
+            court and also fits in with my personal style.
+          </blockquote>
+          <div class="featured-author">Jalen Brunson, Knicks Guard</div>
+          <div class="featured-title">New York Knicks</div>
+          <a href="#" class="cta-link">Read The Case Study →</a>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      function selectService(service) {
+        // Add visual feedback
+        const cards = document.querySelectorAll(".service-card");
+        cards.forEach((card) => (card.style.background = "transparent"));
+
+        // Find and highlight selected card
+        const selectedCard = event.currentTarget;
+        selectedCard.style.background = "rgba(255,255,255,0.8)";
+        selectedCard.style.borderRadius = "15px";
+
+        // Simulate loading new content
+        setTimeout(() => {
+          console.log(`Loading ${service} content...`);
+          // Here you would typically load new content or navigate
+        }, 300);
+      }
+
+      // Add smooth scrolling for better UX
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".service-card");
+
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.background = "rgba(255,255,255,0.6)";
+            this.style.borderRadius = "15px";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            if (!this.classList.contains("selected")) {
+              this.style.background = "transparent";
+            }
+          });
+        });
+      });
+
+      // Add parallax effect to hero section
+      window.addEventListener("scroll", function () {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        const heroSection = document.querySelector(".hero-section");
+        if (heroSection) {
+          heroSection.style.transform = `translateY(${rate}px)`;
+        }
+      });
+    </script>
+  </body>
+</html>

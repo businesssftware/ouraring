@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ŌURA - Smart Ring for Health Tracking</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="/shared/style.css">
+    <link rel="stylesheet" href="/components/footer/footer.css">
+</head>
+
+
+<body>
+  <!-- Header from yongjun
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+
+        // ✅ header 插入后再加载 header.js
+        const script = document.createElement('script');
+        script.src = 'js/header.js';
+        document.body.appendChild(script);
+      });
+  </script> 
+  
+  -->
+
+    <!-- Hero Section / after header -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="bg-elements">
+            <div class="bg-circle"></div>
+            <div class="bg-circle"></div>
+            <div class="bg-circle"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="product-label">
+                Oura Ring <span class="version-badge">4</span>
+            </div>
+            <h1 class="hero-title">
+                Sleeker.<br>
+                Smarter.<br>
+                <span class="emphasis">Made for you.</span>
+            </h1>
+            <button class="cta-button">Discover Oura Ring 4</button>
+        </div>
+
+       <!-- <div class="ring-container"> prototype ring only useless! 
+            <div class="ring" id="heroRing">
+                <div class="ring-outer">
+                    <div class="ring-inner">
+                        <div class="sensor sensor1"></div>
+                        <div class="sensor sensor2"></div>
+                        <div class="sensor sensor3"></div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Advanced Health Insights</h2>
+        <p>Experience the future of personal health monitoring with precision sensors and AI-powered analytics.</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">❤️</div>
+                <h3>Heart Rate Monitoring</h3>
+                <p>Continuous 24/7 heart rate tracking with medical-grade accuracy for comprehensive cardiovascular insights.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🌙</div>
+                <h3>Sleep Optimization</h3>
+                <p>Advanced sleep staging analysis with personalized recommendations to improve your sleep quality and recovery.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🏃</div>
+                <h3>Activity Tracking</h3>
+                <p>Automatic workout detection and detailed activity metrics to help you reach your fitness goals.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🧘</div>
+                <h3>Stress Management</h3>
+                <p>Real-time stress monitoring with guided breathing exercises and recovery recommendations.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🌡️</div>
+                <h3>Temperature Tracking</h3>
+                <p>Precise body temperature monitoring to detect early signs of illness and track menstrual cycles.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Smart Insights</h3>
+                <p>AI-powered health insights and personalized recommendations delivered through the Oura app.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business CTA Section -->
+    <section class="business-cta">
+        <div class="business-content">
+            <div class="business-image">
+                <div class="business-gradient"></div>
+                <h2>Invest in the health<br><em>of your organization</em></h2>
+                <button class="business-btn">For Business</button>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Testimonial greating Section -->
+    <section class="testimonial-section">
+        <div class="testimonial-content">
+            <div class="app-showcase">
+                <!--card left most -->
+                <div class="person-silhouette">
+                    
+                    <div class="projection-bg">
+                         <img src="/assets/img/home4.png" alt="person use experience showcase from OURA apps" />
+
+                    </div>
+                </div>
+
+                <!-- card right top-->
+                <div class="app-interfaces">
+                    <div class="app-card sleep-card">
+                        <div class="card-header">
+                            <span class="time-label">Time asleep</span>
+                            <button class="close-btn">X</button>
+                        </div>
+                        <div class="sleep-time">7h 43min</div>
+                        <div class="sleep-subtitle">Total duration 8h 25m</div>
+                        <div class="sleep-chart">
+                            <div class="chart-bars">
+                                <div class="bar" style="height: 20%"></div>
+                                <div class="bar" style="height: 60%"></div>
+                                <div class="bar" style="height: 80%"></div>
+                                <div class="bar" style="height: 45%"></div>
+                                <div class="bar" style="height: 90%"></div>
+                                <div class="bar" style="height: 70%"></div>
+                                <div class="bar" style="height: 30%"></div>
+                            </div>
+                            <div class="chart-timeline">
+                                <span>10:02 PM</span>
+                                <span>2 AM</span>
+                                <span>6 AM</span>
+                                <span>7:04 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--  Card right down-->
+                    <div class="app-card readiness-card">
+                        <div class="card-header">
+                            <span class="readiness-label">READINESS</span>
+                        </div>
+                        <div class="readiness-circle">
+                            <div class="circle-progress">
+                                <span class="readiness-score">86</span>
+                                <span class="readiness-status">Optimal</span>
+                            </div>
+                        </div>
+                        <div class="readiness-title">Bring it on</div>
+                        <div class="readiness-description">
+                            A great night's sleep can boost your readiness.
+                            If there are any challenging tasks on your to-do
+                            list, today could be the day to tackle them!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-text">
+                <blockquote>
+                    "Oura has become my daily compass, keeping me on the right track."
+                </blockquote>
+                <cite>Jussi L., Oura Member</cite>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="news-container">
+            <h2>IN THE NEWS</h2>
+            
+            <div class="news-grid">
+                <div class="featured-article">
+                    <div class="article-badge">FEATURED ARTICLE</div>
+                    <div class="article-image">
+                        
+                        <div class="article-overlay">
+                            <h3>The Future of Wellness: AI, Privacy, and the OURA Difference</h3>
+                            <button class="read-more-btn">Read More →</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="news-list">
+                    <article class="news-item">
+                        <h4>WIRED: Oura Ring 4 is Lighter, Prettier, and More Wearable than Ever</h4>
+                        <button class="news-arrow">→</button>
+                    </article>
+                    
+                    <article class="news-item">
+                        <h4>Inc.: Oura Just Landed $200 Million to Develop New AI-Powered Wearables</h4>
+                        <button class="news-arrow">→</button>
+                    </article>
+                    
+                    <article class="news-item">
+                        <h4>Axios: Oura's AI plan keeps health data local — and private</h4>
+                        <button class="news-arrow">→</button>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <!-- Footer will be dynamically loaded here -->
+
+
+    </footer>
+    <script src="homepage.js"></script>
+    <script>//dynamic load footer to all page if this code
+    fetch('/components/footer/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        // footer插入后再加载 footer.js
+        const script = document.createElement('script');
+        script.src = '/components/footer/footer.js';
+        document.body.appendChild(script);
+      });
+    </script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

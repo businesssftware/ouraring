@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.site-header.hide-header {
+  transform: translateY(-100%);
+}
+
+.navbar {
+  display: flex;
+  padding: 8px 48px;
+  background-color: transparent;
+  backdrop-filter: none;
+  transition: background-color 0.5s ease;
+  border-radius: 8px;
+  margin: 16px 0;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  align-items: center;
+  gap: 48px;
+  font-family: 'MyAkkurattLL-Regular', sans-serif;
+  color: #4A4741;
+}
+
+.navbar.light {
+  color: #F7F1E8;
+}
+
+.navbar.light a {
+  color: #F7F1E8;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  transform: scaleY(0.8);
+  display: inline-block;
+  align-items: center;
+  font-family: 'MyAkkurattLL-light', sans-serif;
+  font-size: 32px;
+  font-weight: 100;
+  margin-bottom: -6px;
+  z-index: 997;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  max-width: 600px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 48px;
+  font-size: 16px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  transform: translateY(-2px);
+}
+
+.shop-button {
+  background-color: #3184FF;
+  color: #F7F1E8;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 24px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.shop-button:hover {
+  background: #1f529e;
+  color: #ebe5dc;
+  transform: translateY(-2px);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.menu-icon {
+  width: 48px;
+  height: 48px;
+  border: 1px solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+.menu-icon:hover {
+  background-color: #3635311A;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .nav-center {
+    display: none;
+  }
+}
+
+/* Background overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 998;
+  backdrop-filter: blur(3px);
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #F7F1E8;
+  border-radius: 0px 0px 8px 8px;
+  z-index: 999;
+  transform: translateY(-100%);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.menu-wrapper.active {
+  transform: translateY(0);
+}
+
+.menu-content {
+  padding: 24px 48px 60px 48px;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'MyAkkurattLL-Regular';
+}
+
+/* Header section with logo and close button */
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.close-btn {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #4A4741;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4A4741;
+  font-family: inherit;
+}
+
+.menu-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 280px;
+  gap: 60px;
+  align-items: start;
+}
+
+.menu-column h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4A4741;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-column ul li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #4A4741;
+  cursor: pointer;
+  transition: font-weight 0.2s ease;
+}
+
+.menu-column ul li:hover {
+  font-weight: bold;
+}
+
+.menu-column a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-column a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sale-tag {
+  color: #2f5a99;
+  font-size: 12px;
+  font-style: italic;
+  margin-left: 8px;
+  font-family: 'PPEditorialNew-UltraLightItalic', sans-serif;
+  font-weight: bold;
+}
+
+.menu-image-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-image-button img {
+  width: 300px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  /* background: #f0f0f0; */
+}
+
+.menu-image-button {
+  position: relative;
+}
+
+.corner {
+  position: absolute;
+  left: 10px;
+  bottom: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 970px) {
+  .menu-content {
+    padding: 30px 24px 50px 24px;
+  }
+
+  .menu-columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .menu-image-section {
+    order: -1;
+  }
+
+  .menu-image-section img {
+    width: 250px;
+    height: 150px;
+  }
+}
